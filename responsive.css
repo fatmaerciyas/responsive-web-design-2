@@ -1,0 +1,563 @@
+@charset "utf-8";
+/* font-family: 'Raleway', sans-serif; */
+
+*{
+	margin:0;
+	padding:0;
+	list-style:none;/*liste elemanlarının başlarındaki noktalar gitsin*/
+}
+
+body{
+	font-size:16px;
+	font-family: 'Raleway', sans-serif;
+}
+
+.wrapper{
+	width:100%;
+}
+
+.banner{
+	width:100%;/*wrapperın genişliğini alsın*/
+	height:100vh;
+	background-position:center center;/*üstten alttan ve sağdan soldan ortada olsun */
+	background: url(images/bokeh_car_lights_bg3.jpg);
+	background-size:cover;/*ekranın tamamını kaplasın bu çok güzel bir özellik her zaman kullan*/
+	position:relative;
+	box-sizing:border-box;/*herhangi bir padding değeri içeri dönük olsun dışarıya doğru olup da bozmasın*/
+	display:flex;/* en önemli kısım burası*/
+	align-items:center;/*divi dikeyde de ortala*/
+	justify-content:center;/*divi yatayda da ortala*/
+	text-align:center;/*h2 ve p divin içinde ortalansın*/
+}
+
+header{
+	margin:0 auto;
+	position:absolute;/*dışarıdaki banner ı relative içerideki headerı absolte yaptık ki header ı biçimlendirmesi kolay olsun*/
+	width:100%;
+	align-self:flex-start;/*en başa konumlandırılsın*/
+	
+}
+
+
+.buton a{
+	text-decoration:none;
+	font-size:1.2em;
+	color:white;
+	padding:15px 40px;
+	background: rgba(0,89,89,1);
+	border-radius:20px;
+	margin-top:20px;
+}
+.buton a:hover{
+	background:rgba(0,136,136,1);
+	transition-duration:0.2s;
+}
+
+
+header h1{
+	position:absolute;
+	font-size:2em; /*body tagında font family yi ve font size ı tanımlamıştık o zaman 1em=16px oluyor*/
+	margin:30px;
+	font-weight:500;
+	color: rgba(223,223,223,1);
+	float:left;
+}
+
+header nav.menu ul{
+	position:absolute;
+	right:20px;
+	margin:20px;
+}
+
+header nav.menu ul li{
+	display:block;/*çünkü yazıların yan yana gelmeleri gerek*/
+	padding:30px;
+	float:left;/*bu satırı yazmassam alt alta sıralanırlar*/
+}
+
+header nav.menu ul li a{
+	font-size:18px;
+	font-weight:300;
+	color: rgba(177,177,177,1);
+	text-decoration:none;
+}
+
+header nav.menu ul li a:hover{
+	color:white;
+	transition:color 0.2s ease-in-out
+}
+
+
+
+
+h2.altbaslik{
+	color: rgba(224,224,224,1);
+	font-size:3em;
+	font-weight:500;
+	margin-bottom:20px;
+}
+
+.yazi p{
+	font-size:1.5em;/*bunu yazmasam da olurdu body tagında tanımlamıştım zaten*/
+	color: rgba(223,223,223,1);
+	margin-bottom:50px;
+}
+
+section.bolum1{
+	width:100%;
+	text-align:center;
+	padding:100px 0;
+	background: rgba(224,224,224,1);
+}
+
+.bolum1 h2{
+	color: rgba(68,68,68,1);
+	font-size:3em;
+	font-weight:500;
+	margin-bottom:20px;
+}
+
+.bolum1 h2 + p{		/*h2 den sonra gelen ilk p etiketi*/
+	color: rgba(51,51,51,1);
+	font-size:20px;
+	margin-bottom:40px;
+}
+
+
+/*burası çok önemli*/
+
+.container{
+	max-width:1000px;/*max demezsen altta kaydırma çubuğu çıkar*/
+	margin:0 auto;
+	display:flex;
+	justify-content:space between;/*iki yana sıralı olsun*/
+	flex-wrap:wrap;/*containerin içinde 3 tane kutum olacak daralttığımda kutular da alta gitsin*/
+}
+
+.bolum1 .kutu{
+	flex-basis:300px;/*kutuların genişliği en fazla 300px olabilir*/
+	flex-shrink:0;/*daralmalarını istemiyorum*/
+	flex-grow:1;/*alan varsa genişlesin sorun değil*/
+	background:white;
+	text-align:center;/*kutu içindeki ögeler ortalansın yatayda*/
+	padding:30px 0;
+	margin-right:20px;/*birbirlerine yapışmamaları için sağdan boşluk verdim*/
+	align-self:flex-start;/*başlangıç konumundan başlasınlar*/
+}
+
+.bolum1 .kutu:nth-last-child(1){
+	margin-right:0;
+}
+
+.bolum1 .kutu i{
+	font-size:2em;
+	border-radius:100%;
+	padding:40px;
+	color:white;
+}
+
+.bolum1 .kutu i.birinci{
+	background:rgba(0,87,174,1);
+}
+
+.bolum1 .kutu i.ikinci{
+	background: rgba(0,255,64,1);
+}
+
+.bolum1 .kutu i.ucuncu{
+	background: rgba(255,91,91,1);
+}
+
+.bolum1 .kutu h3{
+	color:rgba(74,74,74,1);
+	font-size:22px;
+	font-weight:400;
+	margin:20px 0;
+}
+
+.bolum1 .kutu p{
+	color: rgba(76,76,76,1);
+	font-size:18px;
+	line-height:20px;
+	padding:0 25px;;
+}
+
+section.bolum2{
+	width:100%;
+	background:white;
+	border-top:1px solid #d1d1d1;
+	box-sizing:border-box;
+	text-align:center;
+	display:block;
+	padding-top:80px;
+}
+
+.bolum2 h2{
+	font-size:3em;
+	font-weight:500;
+	margin-bottom:30px;
+	color: #4B4B4B;
+}
+
+.bolum2 h2+p{
+	font-size:1.5em;
+	font-weight:400;
+	margin-bottom:50px;
+	color: #4B4B4B;
+	padding:20px;
+}
+
+.bolum2 .kisiler{
+	width:100%;
+	border-top:1px solid #d1d1d1;
+	border-bottom:1px solid #d1d1d1;
+	display:flex;
+	justify-content:space-between;
+	flex-wrap:wrap;
+}
+
+.bolum2 .kisi{
+	
+	flex-basis:190px;/*200 yapınca 4 tanesi yan yana sığmadı 190 yapınca sığdı*/
+	flex-grow:1;
+	text-align:center;
+	padding:20px;
+	margin:50px 10px;
+}
+
+
+.bolum2 .kisi img{
+	border-radius:100%;
+	margin:5px 10px;
+	float:left;
+	
+}
+
+.bolum2 .kisi h4{
+	margin-top:25px;
+	font-size:1.1em;
+	margin-bottom:5px;
+	color:#606060;
+}
+
+.bolum2 .kisi p{
+	font-weight:400;
+	color:#5D5D5D;
+	margin-bottom:5px;
+}
+
+.bolum2 article{
+	margin:30px auto;
+	width:70%;/*tam genişliği almasını istemiyorum biraz daha ortada toplansın*/
+}
+
+.bolum2 article p{
+	font-size:1.2em;
+	font-weight:400;
+	color: #393939;
+	line-height:1.5em;
+	margin-bottom:30px;
+}
+
+.bolum2 ul li a{
+	background: #005984;
+	border-radius:30px;
+	border:0;/*etrafında bir kenarlık kalsın istemiyorum*/
+	display:inline-block;
+	text-align:center;
+	padding:20px 45px;
+	margin-top:30px;
+	color:white;
+	text-decoration:none;
+}
+.bolum2 ul li a:hover{
+	background: #007CB9;
+	transition-duration:0.2s;
+}
+
+
+
+.bolum3{
+	width:100%;
+	display:block;
+	background: #9595FF;
+	padding-top:60px;
+	padding-bottom:40px;
+	
+	text-align:center;
+}
+
+.bolum3 h2{
+	font-size:2em;
+	font-weight:500;
+	color: #1C1C1C;
+	margin:30px;
+}
+
+.bolum3 h2+p{
+	font-size:20px;
+	font-weight:400;
+	margin:20px;
+	color: #1C1C1C;
+	letter-spacing:1.5px;
+}
+
+
+.bolum3 .container .form{
+	width:600px;
+	margin:70px auto;
+}
+
+.bolum3 .container .form input[type=text]{
+	width:200px;
+	height:30px;
+	border-radius:5px;
+	padding:5px 10px;
+	color:#444;
+	
+}
+
+
+.bolum3 .container .form input[type=email]{
+	width:200px;
+	height:30px;
+	border-radius:5px;
+	padding:5px 10px;
+	color:#444;
+	
+}
+
+
+.bolum3 .container .form textarea{
+	width:420px;
+	height:150px;
+	border-radius:5px;
+	padding:3px 10px;
+	color:white;
+	margin-top:20px;
+	padding:3px 10px;
+}
+
+
+
+.bolum3 .container .form input[type=submit]{
+	margin-top:40px;
+	display: inline-block;
+	background: #007BB7;
+	padding:15px 30px;
+	border-radius:15px;
+	font-size:18px;
+	font-weight:400;
+	cursor:pointer;/*butonun üzerine geldiğimde el işareti çıkmadı ben de çıksın diye bunu yazdım*/
+	border:1px solid #0059B3;
+}
+
+.bolum3 .container .form input[type=submit]:hover{
+	background:#009EEA;
+	transition-duration:0.5s;
+}
+
+footer{
+	width:100%;
+	background: #00152B;
+	padding:30px 0;
+}
+
+footer .container{
+	margin-top:50px;
+	border-bottom:1px solid  #5B5B5B;
+	
+}
+footer .footerkutu{
+	margin-left:20px;
+	width:200px;
+	margin-left:50px;
+	margin-bottom:30px;
+}
+
+footer h3{
+	color: #C5C5C5;
+	font-size:1.5em;
+	font-weight:400;
+	margin-bottom:20px;
+}
+
+footer .container ul{
+	display:block;
+	width:100%;
+	float:left;
+	margin-bottom:30px;
+}
+
+footer .container ul li a{
+	font-size:0.9em;
+	text-decoration:none;
+	color: #C5C5C5;
+	line-height:2.5em;
+}
+	
+	
+footer .container ul li a:hover{
+	text-decoration:underline;
+	/*mouse ile üzerine gelindiğinde linklerin altyazısı çıksın*/
+}
+
+.sosyal{
+	max-width:1000px;
+	margin:0 auto;
+}
+footer .lisans{
+	width:70%;
+	display:flex;
+	margin:30px auto;
+	float:left;
+}
+
+footer .lisans p{
+	text-align:center;
+	font-size:1.5em;
+	color:#C7C7C7;
+	font-weight:400;
+	margin-left:70px;
+	margin-top:20px;
+}
+
+footer .icon{
+	float:right;
+
+}
+
+footer .icon i{
+	text-align:center;
+	width:25px;
+	height:25px;
+	/*width ve height değelerini aynı vermemin sebebi daha sonra border radius ile onu yuvarlak yapacak olmam daha şık durur*/
+	padding:10px;
+	border-radius:100%;
+	font-size:1.5em;
+	cursor:pointer;
+	margin-top:50px;
+	margin-right:30px;
+	
+}
+
+.temizle{
+	clear:both;
+}
+
+footer .icon i.facebook{
+	background:#39599f;
+}
+
+footer .icon i.twitter{
+	background: #2daae4;
+}
+
+footer .icon i.linkedin{
+	background:#31516a;
+}
+
+@media screen and (max-width:980px){ /*tablet modu*/
+	.banner{
+		height:60vh;
+	}
+	h2.altbaslik{
+		font-size:2em;
+	}
+	.yazi p{
+		font-size:1em;
+	}
+	
+	.buton a{
+		font-size:0.8em;
+		padding:10px 25px;/*bunu yaparak buton boyutunun biraz daha küçülmesini sağlayacağım*/
+		/*istersen border radiusu da küçültebilirsin*/
+	}
+	
+	/*şimdi de bölüm1 deki kutularımın alt alta gelmesini istediğim için onları düzenleyeceğim*/
+	
+	.bolum1 h2{
+		font-size:2em;
+		}
+		
+	
+	.bolum1 .kutu{
+		flex-basis:100%;/*kutular ekranı genişlik olarak tamamen kapladı*/
+		margin-bottom:20px;
+	}
+	.bolum2 h2 {
+		font-size:2em;
+	}
+	.bolum2 h2+p{
+		font-size:20px;
+	}
+	.bolum2 .kisi{
+		flex-basis:40%;
+		/*tablet modunda 2 kişi yan yana gözüksün istiyorum 50% yaparsam margin padding vb değerlerden dolayı sığmayacaktı ben de 40% yaptım*/
+	}
+	footer .footerkutu {
+		flex-basis:40%;
+		margin:10px 20px;
+	}
+}
+
+@media screen and (max-width:600px){ /*telefon modu*/
+	
+	header h1{
+		display:none;
+	}
+	
+	.bolum2 .kisi{
+		flex-basis:100%;
+		text-align:center;
+
+	}
+	.bolum2 .kisi img{
+		text-align:center;
+		float:none;
+		/*bu resimlerin telefonda ortalanması için*/
+	}
+	
+	footer .footerkutu {
+		flex-basis:100%;/*kutular alt alta olsun 1 kutu tüm ekranı genişlik olarak kaplasın*/
+		margin:10px 20px;
+		text-align:center;
+	}
+	
+	footer .icon{
+		clear:both;
+		float:none;
+	}
+	footer .lisans{
+		margin-left:60px;
+		margin-top:30px;
+		}
+	
+	footer .lisans p{
+		float:none;
+		margin:20px auto;
+	}
+	
+	.sosyal{
+		text-align:center;
+	}
+	
+	.bolum3 .container .form{
+		width:100%;
+		margin:70px auto;
+	}
+	
+	.bolum3 .container .form input[type=text]{
+		width:80%;/*tamamını da kaplamasın birazcık boşluk bıraksın*/
+		margin-bottom:5px;
+	}
+	
+	.bolum3 .container .form input[type=email]{
+		width:80%;/*tamamını da kaplamasın birazcık boşluk bıraksın*/
+		margin-bottom:5px;
+	}
+	
+	
+	.bolum3 .container .form textarea{
+		width:80%;
+	}
