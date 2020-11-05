@@ -1,4 +1,4 @@
-# responsive-web-design-2
+# web-design-2
 
 ## Responsive web sitesi tasarımı
 
